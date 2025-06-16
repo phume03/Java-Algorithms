@@ -1,4 +1,4 @@
-public class Algorithms_02 {
+public class Algorithms_01_02 {
 
     public static boolean isPasswordComplex(String s) {
         return s.chars().anyMatch(Character::isUpperCase) &&

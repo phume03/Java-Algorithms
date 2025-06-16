@@ -1,4 +1,4 @@
-public class Algorithms_04 {
+public class Algorithms_01_04 {
 
     public static void parseContents(String s) {
         System.out.println("Parse Contents: "+s);
