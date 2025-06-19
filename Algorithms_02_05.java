@@ -25,14 +25,17 @@ public class Algorithms_02_05 {
         int[] arr = { 1, 2, 3, 4, 5, 6 };
         System.out.print("Original: ");
         Arrays.stream(arr).forEach(x -> System.out.print(x+" "));
+        
         System.out.print("\nReversed: ");
         Arrays.stream(reverse(arr))
                 .forEach(x -> System.out.print(x+" "));
         System.out.println();
+        
         reverseInPlace(arr); // changes original, no return
         System.out.print("Reversed in Place: ");
         Arrays.stream(arr).forEach(x -> System.out.print(x+" "));
         System.out.println();
+        
         reverseInPlace(arr); // original was changed it can be used again
         System.out.print("Reversed in Place (again): ");
         Arrays.stream(arr).forEach(x -> System.out.print(x+" "));
