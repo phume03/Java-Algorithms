@@ -13,11 +13,28 @@ public class Algorithms_01_07 {
         return reversed.toString();
     }
 
+    public static String reverse2(String s) {
+        if(s == null || s.isEmpty()) {
+            return s;
+        }
+
+        StringBuilder sb = new StringBuilder(s);
+        return sb.reverse().toString();
+    }
+
     public static void main(String[] args) {
-        System.out.println(reverse(null));
-        System.out.println(reverse(""));
-        System.out.println(reverse("hello"));
-        System.out.println(reverse("tacos"));
-        System.out.println(reverse("Hi!"));
+        System.out.println("null reversed: "+reverse(null));
+        System.out.println("\"\" reversed: "+reverse(""));
+        System.out.println("hello reversed: "+reverse("hello"));
+        System.out.println("tacos reversed: "+reverse("tacos"));
+        System.out.println("Hi! reversed: "+reverse("Hi!"));
+        System.out.println();
+        System.out.println("null reversed: "+reverse2(null));
+        System.out.println("\"\" reversed: "+reverse2(""));
+        System.out.println("hello reversed: "+reverse2("hello"));
+        System.out.println("tacos reversed: "+reverse2("tacos"));
+        System.out.println("Hi! reversed: "+reverse2("Hi!"));
+        System.out.println("\nNB: The results should be exactly the same.");
+        
     }
 }
