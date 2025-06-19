@@ -3,11 +3,7 @@ import java.util.OptionalInt;
 
 public class Algorithms_02_02 {
     public static Integer linearSearch(int[] arr, int item) {
-        for (int current : arr) {
-            if (current == item) {
-                return item;
-            }
-        }
+        for (int current : arr) if (current == item) return item;
 
         return null;
     }
