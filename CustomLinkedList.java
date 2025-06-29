@@ -33,4 +33,54 @@ public class CustomLinkedList {
 
       prev.next = null;
    }
+
+    public void deleteKthNodeFromEnd(int k) {
+
+        if (head == null || k == 0) {
+            return;
+        }
+
+        // list = [a, b, c, d]; k = 2
+        Node first = head; // a
+        Node second = head; // a
+
+        for (int i = 0; i < k; i++) {
+            second = second.next;
+            if (second.next == null) {
+                // K >= length of list
+                if (i == k - 1) {
+                    head = head.next;
+                }
+                return;
+            }
+        }
+
+        // second = c
+
+        while (second.next != null) {
+            first = first.next;
+            second = second.next;
+        }
+
+        // first = b
+        // second = d
+
+        first.next = first.next.next;
+
+
+    }
+
+    // Return the sum of the contents in the linked list
+    public int sum() {
+        
+        int sum = 0;
+        if (this.head != null) {
+            Node current = this.head;
+            while (current != null) {
+                sum = sum + current.data;
+                current = current.next;
+            }
+        }
+        return sum;
+    }
 }
