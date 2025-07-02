@@ -5,7 +5,7 @@ public class Algorithms_02_06 {
         if (arr.length <= 1) {
             return;
         }
-
+        
         int temp = arr[0];
         for (int i=0; i<arr.length -1; i++) {
             arr[i] = arr[i+1];
