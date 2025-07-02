@@ -38,5 +38,21 @@ public class BinarySearchTree {
         }
 
         return true;
-    }    
+    }
+
+    public int treeHeight() {
+        return treeHeight(this.root);
+    }
+
+    private int treeHeight(BinaryNode root) {
+        int height = 0, leftHeight = 0, rightHeight = 0;
+        if (root != null) {
+            height = height + 1;
+            leftHeight = treeHeight(root.left);
+            rightHeight = treeHeight(root.right);
+            height = height + Math.max(leftHeight, rightHeight);
+        }
+        return height;
+    }
+
 }
