@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 public class CustomLinkedList {
 
     Node head;
@@ -68,6 +70,21 @@ public class CustomLinkedList {
         first.next = first.next.next;
 
 
+    }
+
+    public boolean hasCycle() {
+        HashSet<Node> seenNodes = new HashSet<>();
+        Node current = head;
+        while (current != null) {
+            if (seenNodes.contains(current)) {
+                return true;
+            } else {
+                seenNodes.add(current);
+            }
+            current = current.next;
+        }
+
+        return false;
     }
 
     // Return the sum of the contents in the linked list
